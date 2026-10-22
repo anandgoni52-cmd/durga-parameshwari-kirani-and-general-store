@@ -46,3 +46,9 @@
 - **Copy item list** copies the shopping list so you can bring it to the shop. Prices and availability are confirmed at the shop; no prices are estimated.
 - Your cart is saved in this browser and remains after reloading the page.
 
+
+## Product catalog and prices
+
+The editable catalog is in products.js. Each entry contains the English and Kannada names, pack size, category, online reference price, representative artwork type, and a source link. Change the numeric price value to update a reference, and keep the pack size in sync. These are online reference prices, not the shop's confirmed selling prices; location and offers can change them. Replace the representative illustration with a real product photo only after adding that photo to images/ and updating the product artwork code in script.js.
+
+The cart can update quantities, remove items, add a custom item, copy the list, or send it to the shop through WhatsApp. The WhatsApp recipient is encoded in the order link and is not printed in the page text. Confirm stock and final prices with the shop.
