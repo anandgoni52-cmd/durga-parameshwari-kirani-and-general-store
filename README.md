@@ -1,54 +1,27 @@
-# ದುರ್ಗಾ ಪರಮೇಶ್ವರಿ ಕಿರಾಣಿ ಆ್ಯಂಡ್ ಜನರಲ್ ಸ್ಟೋರ್ — ಪ್ರಕಟಣೆ ಮತ್ತು ನಿರ್ವಹಣೆ
+# Durga Parameshwari Kirani and General Store
 
-## ವೆಬ್‌ಸೈಟ್ ಬಗ್ಗೆ
+## Run locally on Windows 11
+1. Press Windows key + E to open File Explorer.
+2. Enter `C:\GroceryWebsite` in the address bar.
+3. Double-click `index.html` to open the site in your browser.
+4. Use the Kannada / English selector to change languages. On mobile, use Menu to open navigation.
 
-ಈ ಯೋಜನೆ ಸರಳ static website: `index.html`, `styles.css`, `script.js` ಮತ್ತು `images` ಫೋಲ್ಡರ್. GitHub Pagesಗೆ ಬೇಕಾದ `index.html` project root‌ನಲ್ಲಿದೆ. ಈ ಕಡತಗಳು GitHub Pagesಗೆ ಹೊಂದುವ relative paths ಬಳಸುತ್ತವೆ.
+## Catalog and prices
+- The catalog contains 43 common grocery items across six categories. Use its search and category filters to find items.
+- Edit names, pack sizes, categories, reference prices, and source links in `products.js`. Change an item's numeric `price` to update the displayed reference.
+- Displayed prices are online reference prices checked against BigBasket listings. Prices vary by region, date, and offer; they are not confirmed shop selling prices. Each product links to its reference source.
+- Current product art is representative SVG artwork, not an exact branded package photo. To add a real product photo, place it in `images/products/` and update the product artwork rendering in `script.js` to use that image path.
 
-ಸ್ಥಳೀಯವಾಗಿ ನೋಡಲು Windows 11 File Explorer‌ನಲ್ಲಿ `C:\GroceryWebsite` ತೆರೆಯಿರಿ; `index.html` ಮೇಲೆ ಎರಡು ಬಾರಿ ಕ್ಲಿಕ್ ಮಾಡಿ. ಬದಲಾವಣೆ ಮಾಡಿದ ಬಳಿಕ ಬ್ರೌಸರ್‌ನಲ್ಲಿ `Ctrl+F5` ಒತ್ತಿ.
+## Cart and WhatsApp orders
+1. Select **Add to cart** on a product. Change quantity with `+` / `−` or remove it from the cart.
+2. Add any missing grocery item by name in the cart.
+3. Copy the list or open a pre-filled WhatsApp order message to the shop's selected contact. The number is encoded in the WhatsApp link and is not printed in the page text.
+4. The cart is saved in this browser. The subtotal uses reference prices; confirm the final prices and stock with the shop.
 
-## ಉತ್ಪನ್ನ ಬೆಲೆಗಳನ್ನು ನವೀಕರಿಸುವುದು
+## Photos and other sections
+- The original managers' photos are `images/manager1-shivanand.jpg` and `images/manager2-mahantesh.jpg`.
+- Shop photos are in `images/`. The site also retains shop location, contact, offers, and service sections.
+- After editing a file, save it and press `Ctrl+F5` in the browser to reload.
 
-ಬೆಲೆಗಳನ್ನು ಇಲ್ಲಿ ಯಾವುದನ್ನೂ ಊಹಿಸಿ ಹಾಕಿಲ್ಲ. `index.html` ನಲ್ಲಿ ಸಂಬಂಧಿಸಿದ ಉತ್ಪನ್ನದ ಬೆಲೆ ಅಂಶವನ್ನು ಹುಡುಕಿ:
-
-```html
-<strong data-price="">Ask in store</strong>
-```
-
-ಅಂಗಡಿಯ ನಿಜವಾದ ಬೆಲೆ ರೂಪಾಯಿಗಳಲ್ಲಿ `data-price` ಒಳಗೆ ಹಾಕಿ. ಉದಾಹರಣೆಗೆ, ನಿಜವಾದ ಬೆಲೆ ₹60 ಆಗಿದ್ದರೆ:
-
-```html
-<strong data-price="60">Ask in store</strong>
-```
-
-ಉಳಿಸಿ ಮರುಲೋಡ್ ಮಾಡಿದಾಗ ಪುಟವು `₹60` ಎಂದು ತೋರಿಸುತ್ತದೆ. ಬೆಲೆ ಖಾಲಿ ಇದ್ದರೆ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ “Ask in store”, ಕನ್ನಡದಲ್ಲಿ “ಬೆಲೆ ಅಂಗಡಿಯಲ್ಲಿ ವಿಚಾರಿಸಿ” ಕಾಣುತ್ತದೆ. ಬೆಲೆ ಬದಲಾಯಿಸಲು Notepad ಅಥವಾ VS Code ಬಳಸಿ; ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡ ಎರಡರಲ್ಲೂ ಉಳಿಸಿ ಪರಿಶೀಲಿಸಿ.
-
-## ಮ್ಯಾನೇಜರ್ ಫೋಟೋಗಳು
-
-ಮೂಲ ಫೋಟೋಗಳನ್ನು `images/manager1-shivanand.jpg` (ಎಡ, ಬಿಳಿ ಅಂಗಿಯ ಶಿವಾನಂದ) ಮತ್ತು `images/manager2-mahantesh.jpg` (ಬಲ, ಮಹಾಂತೇಶ) ಎಂದು ಇರಿಸಿ. ಎರಡೂ ಚಿತ್ರಗಳು ಈಗಾಗಲೇ ಈ projectನಲ್ಲಿ ಸೇರಿವೆ. `index.html` ಮರುಲೋಡ್ ಮಾಡಿ. ಫೋಟೋಗಳನ್ನು CSS ವೃತ್ತಾಕಾರದ frame‌ನಲ್ಲಿ ತೋರಿಸುತ್ತದೆ; ಮೂಲ ಚಿತ್ರ ಕಡತಗಳನ್ನು ಬದಲಾಯಿಸಬೇಡಿ.
-
-## ಉಚಿತ GitHub Pages ಪ್ರಕಟಣೆ
-
-> **ಗಮನಿಸಿ:** GitHub Free ಯೋಜನೆಯಲ್ಲಿ GitHub Pages ಪ್ರಕಟಿಸಲು repository ಸಾರ್ವಜನಿಕವಾಗಿರಬೇಕು. GitHub Pages ಜಾಲತಾಣ ಮತ್ತು repositoryಯ ಕಡತಗಳು ಸಾರ್ವಜನಿಕರಿಗೆ ಕಾಣಬಹುದು. ನೀವು ಸ್ಪಷ್ಟವಾಗಿ ಒಪ್ಪದಿದ್ದರೆ repositoryಯನ್ನು Public ಮಾಡಬೇಡಿ ಅಥವಾ ಪ್ರಕಟಣೆ ಮುಂದುವರಿಸಬೇಡಿ. GitHub Pro/Team ಮುಂತಾದ ಯೋಜನೆಗಳಲ್ಲಿ private repositoryಗೆ Pages ಲಭ್ಯವಾಗಬಹುದು; ಆದರೂ ಪ್ರಕಟಿತ ಪುಟವೇ ಸಾರ್ವಜನಿಕರಿಗೆ ಕಾಣುತ್ತದೆ. Custom domain ಅಥವಾ paid hosting ಅಗತ್ಯವಿಲ್ಲ.
-
-1. `github.com` ಗೆ ಲಾಗಿನ್ ಮಾಡಿ. ಮೇಲಿನ `+` → **New repository** ಆಯ್ಕೆಮಾಡಿ.
-2. Repository ಹೆಸರನ್ನು `durga-parameshwari-kirani-and-general-store` ಎಂದು ನೀಡಿ. Public/private ಆಯ್ಕೆಯನ್ನು ಓದಿ. ಸಾರ್ವಜನಿಕ ಪ್ರಕಟಣೆಗೆ ನಿಮ್ಮ ಅನುಮತಿ ಇದ್ದರೆ ಮಾತ್ರ **Public** ಆಯ್ಕೆಮಾಡಿ; ಇಲ್ಲದಿದ್ದರೆ ಇಲ್ಲಿ ನಿಲ್ಲಿಸಿ.
-3. **Create repository** ಆಯ್ಕೆಮಾಡಿ. GitHubನಲ್ಲಿ **Add file → Upload files** ತೆರೆಯಿರಿ.
-4. `C:\GroceryWebsite` ನಿಂದ `index.html`, `styles.css`, `script.js`, `README.md`, `README-kn.md` ಮತ್ತು ಸಂಪೂರ್ಣ `images` ಫೋಲ್ಡರ್‌ನ ಕಡತಗಳನ್ನು upload ಮಾಡಿ. Folder ರಚನೆ ಉಳಿಯುವಂತೆ `images` ಒಳಗಿನ ಎಲ್ಲಾ ಚಿತ್ರಗಳನ್ನೂ ಸೇರಿಸಿ.
-5. **Commit changes** ಒತ್ತಿ. ನಂತರ repositoryಯ **Settings → Pages** ಗೆ ಹೋಗಿ.
-6. **Build and deployment** ಅಡಿಯಲ್ಲಿ **Deploy from a branch** ಆಯ್ಕೆಮಾಡಿ; branch `main`, folder `/(root)` ಆಯ್ಕೆ ಮಾಡಿ **Save** ಒತ್ತಿ.
-7. Pages ಪುಟದಲ್ಲಿ deployment ಸಿದ್ಧವಾದಾಗ ಕಾಣುವ `https://<ನಿಮ್ಮ-GitHub-ಬಳಕೆದಾರರ-ಹೆಸರು>.github.io/durga-parameshwari-kirani-and-general-store/` URL ತೆರೆಯಿರಿ. ಆ URLನಲ್ಲಿ `index.html`, CSS, JavaScript, ಚಿತ್ರಗಳು, Kannada/English ಭಾಷಾ ಬದಲಾವಣೆ, ಅಂಗಡಿ ಸ್ಥಳದ Google Maps ಲಿಂಕ್ ಪರಿಶೀಲಿಸಿ. WhatsApp ಸಂಖ್ಯೆಗಳನ್ನು ಪ್ರಕಟಣೆಯಿಂದ ತೆಗೆದುಹಾಕಲಾಗಿದೆ.
-8. ಮುಂದಿನ ತಿದ್ದುಪಡಿಗಳಿಗೆ repositoryಯ ಅದೇ ಕಡತಗಳನ್ನು upload/commit ಮಾಡಿ. ಪ್ರಕಟಣೆ ಮುಗಿದಿದೆ ಎಂದು Pages ಪುಟದಲ್ಲಿ URL ಕಾಣಿಸಿಕೊಂಡು ಪುಟ ತೆರೆದಾಗ ಮಾತ್ರ ಪರಿಗಣಿಸಿ.
-
-ಈ projectಗೆ Git repository ಅಥವಾ GitHub account ಸಂಪರ್ಕ ಈ ಕ್ಷಣದಲ್ಲಿ ಹೊಂದಿಲ್ಲ. ಆದ್ದರಿಂದ GitHubಗೆ ಫೈಲ್‌ಗಳನ್ನು upload ಮಾಡಿಲ್ಲ ಮತ್ತು site ಪ್ರಕಟವಾಗಿದೆ ಎಂದು ಹೇಳುತ್ತಿಲ್ಲ. GitHub Pages ಮೂಲ ಕಡತಗಳ ಪ್ರಕಟಣೆಯ ಮೂಲವಾಗಿ branch‌ನ root ಆಯ್ಕೆ ಮಾಡಲು ಅನುಮತಿಸುತ್ತದೆ.
-## Using the cart
-- Select **Add to cart** on a listed product. Use + / − to change the quantity, or remove it from the cart.
-- To include any other kirana item, enter its name in the cart and select **Add item**.
-- **Copy item list** copies the shopping list so you can bring it to the shop. Prices and availability are confirmed at the shop; no prices are estimated.
-- Your cart is saved in this browser and remains after reloading the page.
-
-
-## Product catalog and prices
-
-The editable catalog is in products.js. Each entry contains the English and Kannada names, pack size, category, online reference price, representative artwork type, and a source link. Change the numeric price value to update a reference, and keep the pack size in sync. These are online reference prices, not the shop's confirmed selling prices; location and offers can change them. Replace the representative illustration with a real product photo only after adding that photo to images/ and updating the product artwork code in script.js.
-
-The cart can update quantities, remove items, add a custom item, copy the list, or send it to the shop through WhatsApp. The WhatsApp recipient is encoded in the order link and is not printed in the page text. Confirm stock and final prices with the shop.
+## GitHub Pages
+After the site files are committed to a GitHub repository, configure GitHub Pages under **Settings → Pages** with **Deploy from a branch**, branch `main`, folder `/(root)`. Wait for the Pages deployment to succeed in Actions, then open the URL shown on the Pages settings page. The published website is public; review repository visibility and included information before publishing.
