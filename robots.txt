@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://anandgoni52-cmd.github.io/durga-parameshwari-kirani-and-general-store/sitemap.xml
